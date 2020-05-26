@@ -31,6 +31,16 @@
   color: $primary-color;
 }
 
+.round-img {
+  border-radius: 50%;
+}
+
+.line {
+  height: 1px;
+  background: #ccc;
+  margin: 1.5rem 0;
+}
+
 //Backgrounds
 .bg {
   &-primary {
@@ -66,7 +76,7 @@
   margin-right: 0.5rem;
   outline: none;
   border: none;
-  transition: all 0.2s ease-in;
+  transition: background 0.2s ease-in;
 
   &.btn-primary {
     @include set-background($primary-color);
@@ -95,6 +105,51 @@
   &:hover {
     background: lighten($dark-color, 20%);
     color: #fff;
+  }
+}
+
+// Alerts
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: $light-color;
+  color: #333;
+
+  &.alert-primary {
+    @include set-background($primary-color);
+  }
+  &.alert-dark {
+    @include set-background($dark-color);
+  }
+  &.alert-success {
+    @include set-background($success-color);
+  }
+  &.alert-danger {
+    @include set-background($danger-color);
+  }
+}
+
+// Badges
+.badge {
+  font-style: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: $light-color;
+  color: #333333;
+
+  &.badge-primary {
+    @include set-background($primary-color);
+  }
+  &.badge-dark {
+    @include set-background($dark-color);
+  }
+  &.badge-success {
+    @include set-background($success-color);
+  }
+  &.badge-danger {
+    @include set-background($danger-color);
   }
 }
 
